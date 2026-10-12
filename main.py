@@ -12,6 +12,8 @@ def isPrime(n):
     return True
 
 
+def sortArray(arr):
+    return sorted(arr)
 def countPrime(numbers):
     return sum(1 for num in numbers if isPrime(num))
 
@@ -22,6 +24,7 @@ input_str = input("Enter a list of numbers separated by space: ")
 # Tách chuỗi thành các chuỗi con và chuyển đổi chúng thành số nguyên
 numbers = [int(num) for num in input_str.split()]
 print("The list of numbers is:", numbers)
+print("Sorted list:", sortArray(numbers))
 
 # Đếm số lượng số nguyên tố
 prime_count = countPrime(numbers)
