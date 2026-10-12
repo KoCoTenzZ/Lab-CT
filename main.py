@@ -11,12 +11,21 @@ def isPrime(n):
             return False
     return True
 
+
+def countPrime(numbers):
+    return sum(1 for num in numbers if isPrime(num))
+
+
 # Nhận một chuỗi các số nguyên từ người dùng, cách nhau bởi dấu cách
 input_str = input("Enter a list of numbers separated by space: ")
 
 # Tách chuỗi thành các chuỗi con và chuyển đổi chúng thành số nguyên
 numbers = [int(num) for num in input_str.split()]
 print("The list of numbers is:", numbers)
+
+# Đếm số lượng số nguyên tố
+prime_count = countPrime(numbers)
+print(f"Number of prime numbers: {prime_count}")
 
 # Test the function on the first number of the list if it exists
 if numbers:
