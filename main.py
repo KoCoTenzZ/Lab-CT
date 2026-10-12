@@ -14,6 +14,8 @@ def isPrime(n):
 
 def sortArray(arr):
     return sorted(arr)
+def countPrime(numbers):
+    return sum(1 for num in numbers if isPrime(num))
 
 
 # Nhận một chuỗi các số nguyên từ người dùng, cách nhau bởi dấu cách
@@ -24,6 +26,10 @@ numbers = [int(num) for num in input_str.split()]
 print("The list of numbers is:", numbers)
 print("Sorted list:", sortArray(numbers))
 
+# Đếm số lượng số nguyên tố
+prime_count = countPrime(numbers)
+print(f"Number of prime numbers: {prime_count}")
+
 # Test the function on the first number of the list if it exists
 if numbers:
     num_to_check = numbers[0]
@@ -33,3 +39,4 @@ if numbers:
         print(f"{num_to_check} is not a prime number.")
 else:
     print("No numbers entered.")
+
